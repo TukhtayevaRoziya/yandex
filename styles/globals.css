@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,12 +19,41 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.gmnoprint a,
+.gmnoprint span {
+  display: none;
+}
+
+.gmnoprint div {
+  background: none !important;
+}
+
+.loader {
+  opacity: 0;
+  animation: fade o.4s ease-in forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
   }
-  body {
-    color: white;
-    background: black;
+  50% {
+    opacity: 0.8;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.boder-1{
+  border-width: 1px;
 }

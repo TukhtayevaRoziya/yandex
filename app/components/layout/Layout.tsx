@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
+import { FC, useEffect, useState } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 
-import { FC, useEffect, useState } from 'react'
 import FavIcon from '../../assets/images/preloader.png'
+import Loader from './../ui/Loader';
 
 interface ILayout {
   children: any
@@ -29,6 +30,7 @@ const Layout: FC<ILayout> = ({ children, title }) => {
       <Head>
         <title>{title} | Yandex Taxi Map</title>
         <meta name="description" content="Taxi Api" />
+        <meta name="theme_color" content="#ffbc00" />
         <link rel="shutcut icon" href={FavIcon.src} type="image/png" />
       </Head>
       <Script

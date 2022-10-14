@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import imgs from '../../assets/images/preloader.png'
+import preloader from '../../assets/images/preloader.png'
 
 const Loader = () => {
   return (
-    <div>
-      
+    <div className='w-screen h-screen'>
+      <Image src={preloader.src} layout='fill' alt='preloader' priority={true}/>
     </div>
   )
 }
